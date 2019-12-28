@@ -165,6 +165,7 @@ export default {
             icon: "success",
             button: "OK"
           });
+          this.reset()
         }
       }).catch(function(error) {
         if (error.response.status != 201) {
