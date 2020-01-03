@@ -11,8 +11,6 @@
     </v-app-bar>
     <br>
     <v-container>
-      <!-- <v-layout> -->
-      <!-- {{ placa_mae_item }} -->
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-autocomplete
           v-model="montar.placa_mae"
@@ -100,7 +98,7 @@ export default {
   name: "MonteSeuPC",
 
   data: () => ({
-    valid: true,
+    valid: false,
     processador_item : null,
     placa_de_video_item :null,
     placa_mae_item: null,
