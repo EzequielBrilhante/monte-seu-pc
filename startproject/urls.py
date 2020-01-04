@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from monteseupc.api.viewsets import *
+from monteseupc.viewsets import *
 from rest_framework import routers, serializers, viewsets
 
 
