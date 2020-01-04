@@ -50,7 +50,7 @@ class PlacaMae(models.Model):
     produto = models.CharField("Produto", max_length=50)
     processadores_suportados = models.CharField("Processador Suportado", choices=processadores,max_length=50)
     slots = models.IntegerField("Quantidade de Slots", choices=slots_suportado)
-    memoria_suportada = models.CharField("Memoria suportada", choices=tamanho_memorias, max_length=10)
+    memom_suportada = models.CharField("Memoria suportada", choices=tamanho_memorias, max_length=10)
     video_integrado = models.BooleanField("Video integrado", default=True)
     def __str__(self):
         return self.produto
