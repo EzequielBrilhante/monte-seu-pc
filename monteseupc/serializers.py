@@ -3,7 +3,7 @@ from monteseupc.models import *
 import re
 
 
-def validarMarcaProcesador(value):
+def validarMarcaProcessador(value):
     if str(value['placa_mae'].processadores_suportados) == "ambos":
         return value
     elif str(value['processador'].marca) != str(value['placa_mae'].processadores_suportados):
@@ -60,7 +60,7 @@ class MonteSeuPcSerializer(ModelSerializer):
         fields = ['id', 'processador', 'placa_mae', 'memoria',
                   'qtd_de_memoria', 'tamanho_da_memoria', 'placa_de_video']
         validators = [
-            validarMarcaProcesador,
+            validarMarcaProcessador,
             validarPlacaDeVideo,
             validarQuantidadeDeMemoria,
             validarQuantidadeDeSlots,
